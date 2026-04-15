@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-quickbooks",
+  "version": "0.1.0",
+  "description": "QuickBooks MCP Pack — query customers, invoices, and accounts via QuickBooks Online API.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "quickbooks"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-quickbooks"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/quickbooks",
-  "title": "quickuooks",
-  "description": "QuickBooks MCP Pack — query customers, invoices, and accounts via QuickBooks Online API.",
+  "title": "Quickbooks",
+  "description": "QuickBooks MCP Pack \u2014 query customers, invoices, and accounts via QuickBooks Online API.",
   "version": "0.1.0",
   "websiteUrl": "https://pipeworx.io/packs/quickbooks",
   "repository": {

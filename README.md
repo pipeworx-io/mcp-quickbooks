@@ -2,21 +2,21 @@
 
 QuickBooks MCP Pack — query customers, invoices, and accounts via QuickBooks Online API.
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `qb_query` | Run a SQL-like query against QuickBooks Online data. Supports queries like "SELECT * FROM Customer WHERE DisplayName LIKE \'%Smith%\'" or "SELECT * FROM Invoice WHERE TotalAmt > 1000". |
-| `qb_get_customer` | Get a single QuickBooks customer by ID. Returns full customer details including name, email, phone, and balance. |
-| `qb_list_invoices` | List recent invoices from QuickBooks. Returns invoice number, customer, amount, due date, and status. |
-| `qb_get_invoice` | Get a single QuickBooks invoice by ID. Returns full invoice details including line items. |
-| `qb_list_accounts` | List chart of accounts from QuickBooks. Returns account name, type, balance, and classification. |
+| `qb_query` | Search QuickBooks data by customer, invoice, or account using filters like name, amount, date, or status. Returns matching records with full details. |
+| `qb_get_customer` | Retrieve a customer\'s complete profile including contact info, email, phone, and account balance by customer ID. |
+| `qb_list_invoices` | Get recent invoices with number, customer, amount, due date, and payment status. Use qb_get_invoice for full line-item details. |
+| `qb_get_invoice` | Retrieve a complete invoice by ID including all line items, amounts, taxes, and payment history. |
+| `qb_list_accounts` | Get your chart of accounts with account names, types (asset/liability/equity/etc), balances, and classifications. |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
@@ -28,11 +28,32 @@ Add to your MCP client config:
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use quickbooks
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Quickbooks data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 

@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-quickbooks",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "QuickBooks MCP Pack — query customers, invoices, and accounts via QuickBooks Online API.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "quickbooks",
     "gatewaySlug": "quickbooks",
-    "sourceHash": "v1-0c06801f0f1cb19aa87e335d7e4a79e7add3b5090852a168430d5e794b93e08f",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-abfb608b5dc22d9370550af3b1c7f97cd64433a50e10fad87bb0e249da135484",
+    "sourceCommit": "db27387ed3ef7ec4805d465f7964a7f65f937006"
   }
 }
